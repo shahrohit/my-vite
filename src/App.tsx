@@ -1,11 +1,13 @@
+import Navbar from "@/scene/navbar"
+import { useState } from "react"
 
 
 function App() {
-
+  const [selectedPage, setSelectedPage] = useState<string>("home")
 
   return (
-    <div>
-      <h1 className='text-4xl text-center'>My first React and vite app with tailwind css and typescript 🚀 </h1>
+  <div className="app bg-gray-20">
+      <Navbar selectedPage={selectedPage} setSelectedPage={setSelectedPage}/> 
   </div>
   )
 }
